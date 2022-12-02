@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Box Styling</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1 id="headerTitle">CSS Snippet Cheatsheet</h1>
+        <div id="headerText">
+            Ever have trouble recalling the exact syntax for your favourite CSS code? Give it a permanent home and add
+            it to the page! select any snippet below and it'll automatically select all of the code for you to copy.
+        </div>
+    </header>
+    <main>
+        <div id="heroGrid">
+            <div class="box" class="flexBoxRow">
+                <div class="boxTitle">Flexbox Row</div>
+                <div class="boxText">Use these three properties to create a Flexbox row layout.</div>
+                <pre class="boxCode"><code>
+                    .row { 
+                            display:flex; 
+                            flex direction: row; 
+                            flex-wrap: wrap; 
+                        }
+                </code></pre>
+            </div>
+            <div class="box" class="flexBoxColumn">
+                <div class="boxTitle">Flexbox Column</div>
+                <div class="boxText">Use this to create a Flexboxc column layout</div>
+                <pre class="boxCode"><code>
+                    .column { 
+                            display:flex; 
+                            flex direction: column; 
+                        }
+                </code></pre>
+            </div>
+            <div class="box" class="CSSGridLayout">
+                <div class="boxTitle">CSS Grid Layout</div>
+                <div class="boxText">Build a 12-column layout using CSS Grid</div>
+                <pre class="boxCode"><code>
+                    .grid { 
+                            display:grid; 
+                            width: 100%; 
+                            grid-template-columns:
+                                repeat(12,1fr); 
+                        }
+                </code></pre>
+            </div>
+            <div class="box" class="LinearGradients">
+                <div class="boxTitle">Linear Gradients</div>
+                <div class="boxText">This will create a background gradient from top to bottom</div>
+                <pre class="boxCode"><code>
+                    .linear-gradient-background  { 
+                            background-image: linear-gradient(
+                                rgba(222,102,236,0.3) 0%,
+                                rgba(222,102,236,0.6) 100%,
+                            ); 
+                             
+                        }
+                </code></pre>
+            </div>
+            <div class="box" class="BoxTransitionGlow">
+                <div class="boxTitle">Box Transition Glow</div>
+                <div class="boxText">Use transition and box shadows to glow on hover</div>
+                <pre class="boxCode"><code>
+                    .code-card .card-header  { 
+                            border-radius:8px;
+                            (
+                                rgba(222,102,236,0.3) 0%,
+                                rgba(222,102,236,0.6) 100%,
+                            ); 
+                             
+                        }
+                </code></pre>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+
+    </footer>
+</body>
