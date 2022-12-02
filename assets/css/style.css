@@ -1,6 +1,147 @@
-.boxTitle{
-    color: blue;
+
+#headerTitle{
+    text-align: center;
+    color: plum;
+    font-family: Helvetica ;
 }
 #headerText{
-    color: red;
+    text-align: center;
+    font-family: Helvetica ;
+    font-size: large;
+    color: white;
+    padding: 50px;
+}
+
+body{
+    background-color:rgb(75, 71, 71);
+    align-content: center;    
+
+}
+#heroGrid{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "fr fc cgl"
+        "lg btg oc";
+}
+
+@media only screen and (max-width:992px){
+    #heroGrid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "fr fc" 
+            "cgl lg"
+            "btg oc";
+    }
+}
+@media only screen and (max-width:768px){
+    #heroGrid{
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-template-rows: 6fr;
+        grid-template-areas: 
+            "fr" 
+            "fc" 
+            "cgl"
+            "lg" 
+            "btg" 
+            "oc";
+    }
+    
+}
+ 
+
+
+.box{
+    margin: 10px;
+    border-style: dashed;
+    border-color: white;
+    border-width: 2px;
+}
+
+.boxTitle h3{
+    color: plum;
+    font-family: Helvetica;
+    margin: 15px;
+
+}
+.boxTitle{
+    
+    margin-left: auto ;
+    margin-right: auto;
+    width:90%;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: white;
+    height: 50px;
+    background-color: rgb(75, 71, 71);
+    padding: 10px;
+    position: relative;
+    margin-top: -20px;
+}
+
+
+
+.boxText{
+
+    text-align: left;
+    color: plum;
+    font-size:large;
+    padding: 10px 0px 20px 10px;
+    margin-bottom : 20px;
+    height: 30px;
+    
+}
+
+.boxCode{
+    color: white;
+    text-align: left;
+    margin: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    height: 200px;
+    background-image: linear-gradient(
+        rgba(232,102,236,0.3) 0%,
+        rgba(232,102,236,0.6) 100%
+    );
+    
+}
+
+.boxTitle, .boxCode{
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.boxTitle:hover, .boxCode:hover{
+    box-shadow:inset 0px 0px 8px
+    rgba(232,102,236,1),
+    0 0 15px rgba(232,102,236,1);
+}
+
+
+#flexBoxRow{
+    grid-area: "fr";
+}
+
+#flexBoxColumn{
+    grid-area: "fc";
+}
+
+#cssGridLayout{
+    grid-area: "cgl";
+}
+
+#linearGradients{
+    grid-area: "lg";
+}
+
+#boxTransitionGlow{
+    grid-area: "btg";
+}
+
+#overlayCardWithTitle{
+    grid-area: "oc";
 }
